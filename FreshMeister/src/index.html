@@ -17,23 +17,21 @@
 </head>
 <body>
 <div class="container">
-<div class='span-2' style='background-color:#999999;margin:4px;'>
-	rr
+<div class='span-3 textfill' style='background-color:#999999;margin:4px;'>
+	stront
 </div>
-<div class='span-4' style='background-color:#999999;margin:4px;'>
-	rrrr
+<div class='span-7 textfill' style='background-color:#999999;margin:4px;'>
+	stront
 </div>
-<div class='span-5' style='background-color:#999999;margin:4px;'>
-	rrrrr
+<div class='span-4 textfill' style='background-color:#999999;margin:4px;'>
+	stront
 </div>
-<div class='span-8' style='background-color:#999999;margin:4px;'>
-	rrrrrrrr
+<div class='span-5 textfill' style='background-color:#999999;margin:4px;'>
+	stront
 </div>
-<div class='span-5' style='background-color:#999999;margin:4px;'>
-	rrrrr
+<div class='span-5 last textfill' style='background-color:#999999;margin:4px;'>
+	stront
 </div>
-
-
 
 </div>
 
@@ -41,5 +39,51 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
 <!--Formalize-->
 <script src="formalize/js/jquery.formalize.js"></script>
+<!--AutoFontSize-->
+<script type="text/javascript">
+    (function($) { 
+      $.fn.textfill = function(options) { 
+        return this.each(function() {
+          var text = $(this).text();
+          $(this).text('');
+          var container = $('<span />').text(text).appendTo($(this));
+          var min = 1, max = 200, fontSize;
+          do {
+            fontSize = (max + min) / 2;
+            container.css('fontSize', fontSize);
+            var multiplier = $(this).height()/container.height();
+            if (multiplier == 1) { min = max = fontSize}
+            if (multiplier >  1) { min = fontSize}
+            if (multiplier <  1) { max = fontSize}
+          } while ((max - min) > 1);
+          fontSize = min;
+          if ($(this).width() < container.width()) {
+            min = 1;
+            do {
+              fontSize = (max + min) / 2;
+              container.css('fontSize', fontSize);
+              var multiplier = $(this).width()/container.width();
+              if (multiplier == 1) { min = max = fontSize}
+              if (multiplier >  1) { min = fontSize}
+              if (multiplier <  1) { max = fontSize}
+            } while ((max - min) > 1);
+            fontSize = min;
+          }
+          container.remove();
+          $(this).text(text);
+          var minFontSize = options.minFontPixels;
+          var maxFontSize = options.maxFontPixels;
+          $(this).css('fontSize', 
+                      minFontSize && (minFontSize > fontSize) ?
+                      minFontSize :
+                      maxFontSize && (maxFontSize < fontSize) ?
+                      maxFontSize :
+                      fontSize); 
+        }); 
+      }; 
+    })(jQuery);
+
+$(".textfill").textfill({ minFontPixels: 20 }); 
+</script>
 </body>
 </html>
