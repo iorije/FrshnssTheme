@@ -15,6 +15,9 @@
 <!--Formalize-->
 <link rel="stylesheet" href="formalize/css/formalize.css" />
 
+<!--Styler.css-->
+<link rel="stylesheet" href="css/styler.css" />
+
 <style>
 .background
 {
@@ -29,106 +32,62 @@
 </style>
 
 </head>
-<body>
-<div class="container showgrid">
-
-
-<div class='span-24 background textfill'style='height:90px;'>
-	WHO&#39;S THE FRESHEST
-</div>
-<div class='span-24 last background '>
-	<div class='span-4 background textfill vtext'style='height:90px;'>
-		14.4.2013
-	</div>
-	<div class='span-20 last background '>
-		<div class='span-20 background textfill'style='height:90px;'>
-			BBOY EN STANDUP BATTLES, JAM, ARE YOU THE FRESHEST?
+ <body>
+    <div class="container">
+		<div class="span-24 foefelare">
+			<img src="img/logo.png" alt="" class="logo" />
 		</div>
-		<div class='span-10 background textfill'style='height:90px;'>
-			VILLA BASTA
+		<div class="span-24 bar"></div>
+		<div class="span-24">
+			<img src="img/frshnss.png" alt="Freshness" />
 		</div>
-		<div class='span-10 last background textfill'style='height:90px;'>
-			SPONSOR SHIZZLE
+		<div class="span-24 bar"></div>
+		<div class="ninormaal"> </div>
+		<div class='span-2 vtext training'>
+			TRAINING
 		</div>
-	</div>
+		<div class='span-18'>
+			<div class='span-9 day pright'>
+				DINSDAG
+			</div>
+			<div class='span-9 last day pright'>
+				ZATERDAG
+			</div>
+			<div class='span-9 pright hour'>
+				20:00 - 22:00
+			</div>
+			<div class='span-9 last pright hour'>
+				18:00 - 21:00
+			</div>
+			<div class='span-18 custom pright'>
+				<div class="span-6 red x">
+						OPEN TRAINING<br />TEACH AND BE TAUGHT
+				</div>
+				<div class="span-12 last pright">
+					VERSE HIPHOP EN BREAKBEATZ &nbsp;|&nbsp; HAVE FUN &nbsp;|&nbsp; FRESHNESS &nbsp;|&nbsp; <a href="http://www.facebook.com/frshnss" target="_blank">UPDATES</a><br />			
+					<strong>LOCATIE:</strong> <a href="http://mapof.it/g/villa+basta,+hasselt" target="_blank">VILLA BASTA VZW - SCHIPPERSTRAAT 13 - 3500 HASSELT</a>
+				</div>
+			</div>
+		</div>
+		<div class="span-4 last color">
+			<img src="img/villa_basta.jpg" alt="logo villa basta" />
+		</div>
+		<div class="span-24 small-bar"></div>
+		<div class="span-24 connect">
+			VOOR MEER INFO MAIL NAAR <a href="mailto:info@frshnss.be">INFO@FRSHNSS.BE</a>
+		</div>
+		<div class="span-24 bar">
+		</div>
+		<div class="span-24 center footer">
+			<p>
+				2013 - <a href="http://www.facebook.com/frshnss" target="_blank">Freshness</a> - i.s.m. <a href="http://www.villabasta.be/aanbod/item.asp?aanbod=3047" target="_blank">Villa Basta</a> | <a href="http://www.jeugdhasselt.be/locatie/freshness" target="_blank">Jeugdienst hasselt</a> | <a href="http://www.cera.be/" target="_blank">Cera</a>
+			</p>
+		</div>
+    </div>
 
-</div>
-
-
-
-
-</div>
 
 <!--jQuery-->
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
-<!--AutoFontSize-->
-<script type="text/javascript">
-    (function($) { 
-      $.fn.textfill = function(options) { 
-        return this.each(function() {
-          var text = $(this).html();
-          var oldFontSize = parseInt($(this).css("font-size"));
-          var contentFontSizes = [];
-          $(this).find('*').each(function(i, e){
-              contentFontSizes[i] = parseInt($(this).css("font-size"));
-          });
-          $(this).html('');
-          var container = $('<span />').html(text).appendTo($(this));
-          var min = 1, max = 200, fontSize;
-          do {
-            fontSize = (max + min) / 2;
-            container.css('fontSize', fontSize);
-            container.find('*').each(function(i, e){
-              $(this).css("font-size", fontSize);
-          });
-            var multiplier = $(this).height()/container.height();
-            if (multiplier == 1) { min = max = fontSize}
-            if (multiplier >  1) { min = fontSize}
-            if (multiplier <  1) { max = fontSize}
-          } while ((max - min) > 1);
-          fontSize = min;
-          coef = fontSize / oldFontSize;
-          if ($(this).width() < container.width()) {
-            min = 1;
-            do {
-              fontSize = (max + min) / 2;
-              container.css('fontSize', fontSize);
-              container.find('*').each(function(i, e){
-                  $(this).css("font-size", fontSize);
-              });
-              var multiplier = $(this).width()/container.width();
-              if (multiplier == 1) { min = max = fontSize}
-              if (multiplier >  1) { min = fontSize}
-              if (multiplier <  1) { max = fontSize}
-            } while ((max - min) > 1);
-            fontSize = min;
-            coef = fontSize / oldFontSize;
-          }
-          container.remove();
-          $(this).html(text);
-          var minFontSize = options.minFontPixels;
-          var maxFontSize = options.maxFontPixels;
-          var newFontSize = minFontSize && (minFontSize > fontSize) ?
-                      minFontSize :
-                      maxFontSize && (maxFontSize < fontSize) ?
-                      maxFontSize :
-                      fontSize;
-                
-          coef = minFontSize && (minFontSize > fontSize) ?
-                      minFontSize / oldFontSize :
-                      maxFontSize && (maxFontSize < fontSize) ?
-                      maxFontSize / oldFontSize :
-                      coef;
-          $(this).find('*').each(function(i, e){
-              $(this).css("font-size", newFontSize);
-          });
-          $(this).css('fontSize', newFontSize);
-        }); 
-      }; 
-    })(jQuery);
-
-$(".textfill").textfill({ minFontPixels: 20 }); 
-</script>
 <!--Formalize-->
 <script src="formalize/js/jquery.formalize.js"></script>
 </body>

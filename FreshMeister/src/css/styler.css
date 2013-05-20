@@ -1,0 +1,85 @@
+/* -- Custom Styler -- */
+
+.logo{
+	margin: 0 !important;
+}
+.foefelare{
+	height: 260px !important;
+}
+.center{
+	text-align: center !important;
+}
+
+.bar{
+	height: 21px;
+	background-color: #000000;
+}
+.small-bar{
+	height: 15px;
+	background-color: #000000;
+}
+div{
+	text-align: justify;
+	font-weight: bold;
+}
+.day{
+	font-size:40px;
+	font-weight: bold;
+	line-height: 100%;
+	padding-top: 10px;
+}
+.hour{
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 18px;
+}
+.pleft{
+	text-align: left;
+}
+.pright{
+	text-align: right;
+}
+.training{
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 70px;
+	color:white;
+}
+color{
+	background-color: green;
+}
+.custom{
+	padding-top:10px;
+}
+a{
+	color:red;
+	text-decoration: none;
+}
+a:hover{
+	color:red;
+	text-decoration: none;
+}
+.footer{
+	font-weight:normal;
+}
+.red{
+	background-color:red;
+	color:white;
+}
+.x{
+	text-align: center;
+}
+.connect{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 15px;
+	text-align: center;
+}
+.ninormaal{
+	background-color:black;
+	position: relative;
+	z-index: -20;
+	height: 122px;
+	width: 76px;
+	top: 458px;
+}
