@@ -167,9 +167,11 @@ a {
         text-decoration: none;
     }
 
+/* -- FOOTER -- */
 .footer {
     background-color: #000000;
     font-weight: normal;
+    height: auto;
 }
 
     .footer a {
@@ -180,16 +182,27 @@ a {
         color: white;
     }
 
+    .footer .contact p {
+        padding-right: 0px;
+    }
+
+.footer-header {
+    background: white;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+    .footer-header .icon-envelope, .footer-header .icon-group, .footer-header .icon-globe, .footer-header .icon-external-link {
+        padding-left: 10px;
+    }
+    .footer .icon-youtube-sign, .footer .icon-facebook-sign {
+        padding-left: 10px;
+    }
+
 .red {
     background-color: #D70000;
     color: white;
-}
-
-.connect {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 15px;
-    text-align: center;
 }
 
 /* -- button with icon -- */
