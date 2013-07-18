@@ -57,9 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\libs\font-awesome.min.css" />
+    <Content Include="css\libs\font\fontawesome-webfont.svg" />
     <Content Include="css\libs\foundation.css" />
     <Content Include="css\libs\foundation.min.css" />
-    <Content Include="css\libs\normalize.css" />
+    <Content Include="css\libs\normalize.min.css" />
     <Content Include="css\styler.css" />
     <Content Include="favicon.ico" />
     <Content Include="img\bar.png" />
@@ -99,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="php\mailer.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\libs\font\fontawesome-webfont.eot" />
+    <Content Include="css\libs\font\fontawesome-webfont.ttf" />
+    <Content Include="css\libs\font\fontawesome-webfont.woff" />
+    <Content Include="css\libs\font\FontAwesome.otf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

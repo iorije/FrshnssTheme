@@ -172,6 +172,7 @@ a {
     background-color: #000000;
     font-weight: normal;
     height: auto;
+    padding-bottom:20px;
 }
 
     .footer a {
@@ -187,7 +188,7 @@ a {
     }
 
 .footer-header {
-    background: white;
+    background: #d70000;
     margin-top: 20px;
     font-size: 20px;
     padding: 10px;
@@ -196,10 +197,21 @@ a {
     .footer-header .icon-envelope, .footer-header .icon-group, .footer-header .icon-globe, .footer-header .icon-external-link {
         padding-left: 10px;
     }
-    .footer .icon-youtube-sign, .footer .icon-facebook-sign {
-        padding-left: 10px;
-    }
 
+.footer .icon-youtube-sign, .footer .icon-facebook-sign {
+    padding-left: 10px;
+}
+
+.footer ul {
+    padding-top:10px;
+}
+
+    .footer ul li {
+        list-style-type: none;
+    }
+        .footer ul li a {
+            font-size:14px;
+    }
 .red {
     background-color: #D70000;
     color: white;
