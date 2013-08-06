@@ -9,11 +9,23 @@ body {
     color: #000000;
 }
 
+@font-face {
+    font-family: BEBAS;
+    src: url('BEBAS.TTF');
+}
+
+.bebas {
+    font-family: BEBAS;
+    letter-spacing: 2px;
+}
+
 p {
     margin-bottom: 0px;
     font-size: 14px;
     padding: 5px;
 }
+
+
 
 /* -- PADDING & MARGIN RESETS -- */
 .no-padding-right {
@@ -117,41 +129,52 @@ div {
     font-weight: bold;
 }
 
+.maxWidth {
+    width: 100%;
+}
+
+.training {
+}
+
+    .training p {
+        font-size: 40px;
+        padding: 0px;
+    }
+
+.trainingInfo p {
+    font-size: 30.5px;
+    padding: 0px;
+    color: black;
+    height: 64px;
+    padding-top: 4px;
+}
+
+.date {
+    padding-left:0px;
+    padding-right:0px;
+}
+
 .day {
     font-size: 40px;
-    font-weight: bold;
     line-height: 100%;
     padding-top: 0px;
     margin-bottom: 5px;
 }
 
 .hour {
-    background-color: #000000;
-    color: #FFFFFF;
     font-size: 18px;
-    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .pleft {
     text-align: left;
+    float: left;
 }
 
 .pright {
     text-align: right;
+    float: right;
 }
-
-.training {
-    background-color: black;
-    height: 180px;
-    padding: 0px;
-}
-
-    .training p {
-        font-size: 25px;
-        font-weight: bold;
-        color: white;
-        margin-top: 99px;
-    }
 
 .custom {
     padding-top: 10px;
@@ -162,17 +185,21 @@ a {
     text-decoration: none;
 }
 
-    a:hover {
-        color: #D70000;
-        text-decoration: none;
-    }
+.icon-time {
+    font-size: 20px;
+}
+
+a:hover {
+    color: #D70000;
+    text-decoration: none;
+}
 
 /* -- FOOTER -- */
 .footer {
     background-color: #000000;
     font-weight: normal;
     height: auto;
-    padding-bottom:20px;
+    padding-bottom: 20px;
 }
 
     .footer a {
@@ -190,8 +217,8 @@ a {
 .footer-header {
     background: #d70000;
     margin-top: 20px;
-    font-size: 20px;
     padding: 10px;
+    font-size: 20px;
 }
 
     .footer-header .icon-envelope, .footer-header .icon-group, .footer-header .icon-globe, .footer-header .icon-external-link {
@@ -203,17 +230,24 @@ a {
 }
 
 .footer ul {
-    padding-top:10px;
+    padding-top: 10px;
 }
 
     .footer ul li {
         list-style-type: none;
     }
+
         .footer ul li a {
-            font-size:14px;
-    }
+            font-size: 14px;
+        }
+
 .red {
     background-color: #D70000;
+    color: white;
+}
+
+.black {
+    background-color: black;
     color: white;
 }
 
@@ -395,14 +429,6 @@ a.button.icon.fb-button {
         visibility: hidden;
         display: none;
     }
-
-    .training {
-        height: 206px;
-    }
-
-        .training p {
-            margin-top: 61px !important;
-        }
 
     .orderform .title {
         text-align: left;

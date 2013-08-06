@@ -17,7 +17,6 @@
         $('.dynamic-div').each(function () {
             SetDivHeight($(this));
         });
-        SetMarginTop();
     });
 
     $(window).resize(function () {
@@ -25,6 +24,5 @@
         $('.dynamic-div').each(function () {
             SetDivHeight($(this));
         });
-        SetMarginTop();
     });
 });

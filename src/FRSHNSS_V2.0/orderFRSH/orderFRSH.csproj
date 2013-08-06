@@ -108,6 +108,9 @@
     <Content Include="css\libs\font\fontawesome-webfont.woff" />
     <Content Include="css\libs\font\FontAwesome.otf" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\BEBAS.TTF" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
