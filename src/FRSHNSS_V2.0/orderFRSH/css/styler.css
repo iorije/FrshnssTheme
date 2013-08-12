@@ -142,11 +142,9 @@ div {
     }
 
 .trainingInfo p {
-    font-size: 30.5px;
+    font-size: 23.4px;
     padding: 0px;
     color: black;
-    height: 64px;
-    padding-top: 4px;
 }
 
 .date {
@@ -155,7 +153,7 @@ div {
 }
 
 .day {
-    font-size: 40px;
+    font-size: 27px;
     line-height: 100%;
     padding-top: 0px;
     margin-bottom: 5px;
@@ -437,4 +435,11 @@ a.button.icon.fb-button {
     .contain-to-grid .top-bar {
         margin-bottom: 0px;
     }
+    .trainingInfo p {
+    font-size: 30.5px;
+    height: 64px;
+    padding-top: 4px;
+}.day {
+    font-size: 40px;
+}
 }
