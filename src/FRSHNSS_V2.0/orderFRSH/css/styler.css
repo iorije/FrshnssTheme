@@ -145,11 +145,12 @@ div {
     font-size: 23.4px;
     padding: 0px;
     color: black;
+    overflow: hidden;
 }
 
 .date {
-    padding-left:0px;
-    padding-right:0px;
+    padding-left: 5px;
+    padding-right: 0px;
 }
 
 .day {
@@ -162,6 +163,7 @@ div {
 .hour {
     font-size: 18px;
     padding-left: 5px;
+    padding-right: 5px;
 }
 
 .pleft {
@@ -191,6 +193,39 @@ a:hover {
     color: #D70000;
     text-decoration: none;
 }
+
+/*carousel*/
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+    .rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+        .rslides li:first-child {
+            position: relative;
+            display: block;
+            float: left;
+        }
+
+    .rslides img {
+        display: block;
+        height: auto;
+        float: left;
+        width: 100%;
+        border: 0;
+    }
 
 /* -- FOOTER -- */
 .footer {
@@ -435,11 +470,14 @@ a.button.icon.fb-button {
     .contain-to-grid .top-bar {
         margin-bottom: 0px;
     }
+
     .trainingInfo p {
-    font-size: 30.5px;
-    height: 64px;
-    padding-top: 4px;
-}.day {
-    font-size: 40px;
-}
+        font-size: 30.5px;
+        height: 64px;
+        padding-top: 4px;
+    }
+
+    .day {
+        font-size: 40px;
+    }
 }

@@ -90,6 +90,7 @@
     <Content Include="js\foundation\foundation.section.js" />
     <Content Include="js\foundation\foundation.tooltips.js" />
     <Content Include="js\foundation\foundation.topbar.js" />
+    <Content Include="js\responsiveslides.min.js" />
     <Content Include="js\scripter.js" />
     <Content Include="js\vendor\custom.modernizr.js" />
     <Content Include="js\vendor\jquery.js" />

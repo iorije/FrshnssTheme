@@ -2,7 +2,7 @@
     //sets div containing img to height of img
     function SetDivHeight(div) {
         var imgHeight = div.find('img').height();
-        div.css('height', imgHeight - 1);
+        div.css('height', imgHeight);
     };
 
     //set margin-top of training
@@ -16,6 +16,18 @@
         //SetDivHeight
         $('.dynamic-div').each(function () {
             SetDivHeight($(this));
+        });
+
+        //carousel
+        $(window).load(function () {
+            $(".rslides").responsiveSlides({
+                auto: true,             // Boolean: Animate automatically, true or false
+                speed: 1000,            // Integer: Speed of the transition, in milliseconds
+                timeout: 2000,          // Integer: Time between slide transitions, in milliseconds
+                pager: false,           // Boolean: Show pager, true or false
+                nav: false,             // Boolean: Show navigation, true or false
+                random: true,          // Boolean: Randomize the order of the slides, true or false
+            });
         });
 
         //Firefox specific code
